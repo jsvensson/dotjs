@@ -1,0 +1,29 @@
+// Color variables
+
+@quote-even:	#82b8dc;
+@quote-odd:		#a2c1d5;
+
+// Mixins
+
+.rounded-corners (@radius: 5px) {
+  border-radius: @radius;
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+}
+
+
+// INDEX VIEW
+
+// Hide forum descriptions
+div.CategoryDescription {
+	visibility: hidden;
+}
+
+// THREAD VIEW
+
+// Alternating colors for nested quotes
+blockquote.UserQuote {
+	div.QuoteText {
+		.rounded-corners
+	}
+}

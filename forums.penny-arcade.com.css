@@ -1,0 +1,8 @@
+div.CategoryDescription {
+  visibility: hidden;
+}
+blockquote.UserQuote div.QuoteText {
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+}
