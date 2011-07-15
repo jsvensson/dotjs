@@ -1,28 +1,168 @@
 // Color variables
 
-@quote-even:	#82b8dc;
-@quote-odd:		#a2c1d5;
+@color-infobox: #e5e4d7;
+@color-head-dark: #032760;
+@color-pager: #a7a69f;
+
+// Text colors
+
+@color-link: #0055A2;
+
+// Alternating list/post colors
+@color-odd:		#f4f4e8;
+@color-even:	lighten(@color-odd, 5%);
+
+//@quote-1: #62bef8;
+@quote-1: #e0d8b8;
+@quote-2: lighten(@quote-1, 7%);
+@quote-3: lighten(@quote-2, 7%);
+@quote-4: lighten(@quote-3, 7%);
+@quote-shadow: darken(@quote-1, 10%);
+
+@quote-even: 	@quote-2;
+@quote-odd:		@quote-1;
 
 // Mixins
 
-.rounded-corners (@radius: 5px) {
+.rounded-corners (@radius: 8px) {
   border-radius: @radius;
   -webkit-border-radius: @radius;
   -moz-border-radius: @radius;
 }
 
+.quote-shadow (@color: #000) {
+	box-shadow: 6px 6px 3px @color;	
+}
+
 /* INDEX VIEW */
+
+/* Minipager colors */
+
+.MiniPager {
+	a, span {
+		background-color: @color-pager;
+		border-right: 1px solid darken(@color-pager, 20%);
+	}	
+	a.GoToPageLink {
+		display: none; /* So rarely used */
+	}
+}
+
+/* Alternating colors in thread list */
+ul.Discussions {
+	li.Item {
+		background-color: @color-odd;
+	}
+	li.Item.Alt {
+		background-color: @color-even;
+	}
+}
 
 /* Hide forum descriptions */
 div.CategoryDescription {
-	visibility: hidden;
+	display: none;
 }
 
 /* THREAD VIEW */
 
+/* Hide user level badge */
+/* .CommentTable td.Author div.Photo {
+	width: 80px;
+	span.Rank {
+		display: none;
+	}
+} */
+
+/* User info box */
+
+li.Comment {
+	table.CommentTable {
+		td.Author {
+			background-color: @color-infobox;
+			div.CommentInfo {
+				display: none; // hide IP address for now when posting screens
+			}
+		}
+		td.Comment {
+			background-color: @color-odd;
+		}
+	}
+}
+
+li.Comment.Alt {
+	table.CommentTable {
+		td.Comment {
+			background-color: @color-even;
+		}
+	}
+}
+
+/* Post meta box */
+
+.CommentTable div.Meta span.DateCreated {
+	background-color: @quote-1;
+	a {
+		color: @color-link;
+		}
+}
+
+
 /* Alternating colors for nested quotes */
 blockquote.UserQuote {
 	div.QuoteText {
-		.rounded-corners
+		background-color: @quote-odd;
+		.rounded-corners;
+		> blockquote.UserQuote {
+			div.QuoteText {
+				background-color: @quote-even;
+				> blockquote.UserQuote {
+					div.QuoteText {
+						background-color: @quote-odd;
+						> blockquote.UserQuote {
+							div.QuoteText {
+								background-color: @quote-even;
+							}
+						}
+					}
+				}
+			}
+		}
 	}
+}
+
+/* Underlined links in posts and sigs for clarity */
+ul.MessageList div.Message a, ul.MessageList div.UserSignature a {
+  text-decoration: underline;
+}
+
+/* GLOBAL TWEAKS */
+
+/* New background image */
+#Frame {
+	background-repeat-x: no-repeat;
+	background-repeat-y: no-repeat;
+	background-attachment: fixed;
+	background-position-x: 50%;
+	background-position-y: 0px;
+	background-origin: initial;
+	background-clip: initial;
+	background-color: black;
+	background-image: url(http://dl.dropbox.com/u/569190/dotjs/pa/wood.jpeg);
+}
+
+/* Form banner */
+
+div.CategoryHeadings, div.CategoryTabs, div.ActivityTabs, #MessageForm h2,
+div.ConversationTabs, div.ConversationsTabs, div.FormBanner, div.ProfileTabs,
+div.DiscussionTabs, div.DiscussionsTabs, div.SearchTabs {
+	background: none; // Remove background image
+	background: #e0d8b8; /* Old browsers */
+	background: -moz-linear-gradient(top, #e0d8b8 0%, #e0d8b8 27%, #ad8e47 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e0d8b8), color-stop(27%,#e0d8b8), color-stop(100%,#ad8e47)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #e0d8b8 0%,#e0d8b8 27%,#ad8e47 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #e0d8b8 0%,#e0d8b8 27%,#ad8e47 100%); /* Opera11.10+ */
+	background: -ms-linear-gradient(top, #e0d8b8 0%,#e0d8b8 27%,#ad8e47 100%); /* IE10+ */
+	background: linear-gradient(top, #e0d8b8 0%,#e0d8b8 27%,#ad8e47 100%); /* W3C */
+
+
 }
