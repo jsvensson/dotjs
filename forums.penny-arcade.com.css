@@ -1,8 +1,17 @@
-div.CategoryDescription {
-  visibility: hidden;
-}
-blockquote.UserQuote div.QuoteText {
-  border-radius: 5px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-}
+.MiniPager a,.MiniPager span{background-color:#a7a69f;border-right:1px solid #75746b;}
+.MiniPager a.GoToPageLink{display:none;}
+ul.DataList.Discussions li.Item table td.Count,ul.DataList.CategoryList li.Item table td.Count{text-transform:lowercase;font-weight:300;font-family:'HelveticaNeue-Light','Helvetica Neue Light','Helvetica Neue',Helvetica,'Lucida Grande',Arial,sans-serif;}
+div.CategoryDescription{display:none;}
+li.Comment table.CommentTable td.Author{background-color:#e5e4d7;}
+li.Comment table.CommentTable td.Comment{background-color:#f4f4e8;}
+li.Comment.Alt table.CommentTable td.Comment{background-color:#fcfcf9;}
+.CommentTable div.Meta span.DateCreated{background-color:#e0d8b8;}.CommentTable div.Meta span.DateCreated a{color:#0055a2;}
+blockquote.UserQuote div.QuoteText{background-color:#e0d8b8;border-radius:8px;-webkit-border-radius:8px;-moz-border-radius:8px;}blockquote.UserQuote div.QuoteText>blockquote.UserQuote div.QuoteText{background-color:#ebe6d1;}blockquote.UserQuote div.QuoteText>blockquote.UserQuote div.QuoteText>blockquote.UserQuote div.QuoteText{background-color:#e0d8b8;}blockquote.UserQuote div.QuoteText>blockquote.UserQuote div.QuoteText>blockquote.UserQuote div.QuoteText>blockquote.UserQuote div.QuoteText{background-color:#ebe6d1;}
+ul.MessageList div.Message a,ul.MessageList div.UserSignature a{text-decoration:underline;}
+.EmotifyDropdown{top:-20px;}
+#Frame{background-repeat-x:no-repeat;background-repeat-y:no-repeat;background-attachment:fixed;background-position-x:50%;background-position-y:0px;background-origin:initial;background-clip:initial;background-color:black;background-image:url(http://atomicplayboy.net/files/pa-restyle/wood.jpeg);}
+table.DiscussionHeading td,ul.CategoryList li.Depth1{background-image:url(http://atomicplayboy.net/files/pa-restyle/wood-dark.jpeg);}
+div.CategoryHeadings,div.CategoryTabs,div.ActivityTabs,#MessageForm h2,div.ConversationTabs,div.ConversationsTabs,div.FormBanner,div.ProfileTabs,div.DiscussionTabs,div.DiscussionsTabs,div.SearchTabs{background:none;background:#e0d8b8;background:-moz-linear-gradient(top, #e0d8b8 0%, #e0d8b8 27%, #ad8e47 100%);background:-webkit-gradient(linear, left top, left bottom, color-stop(0%, #e0d8b8), color-stop(27%, #e0d8b8), color-stop(100%, #ad8e47));background:-webkit-linear-gradient(top, #e0d8b8 0%, #e0d8b8 27%, #ad8e47 100%);background:-o-linear-gradient(top, #e0d8b8 0%, #e0d8b8 27%, #ad8e47 100%);background:-ms-linear-gradient(top, #e0d8b8 0%, #e0d8b8 27%, #ad8e47 100%);background:linear-gradient(top, #e0d8b8 0%, #e0d8b8 27%, #ad8e47 100%);}
+#Head,#Frame #Foot div{color:#fff;border-radius:6px;-webkit-border-radius:6px;-moz-border-radius:6px;padding:0.2em 0.8em;background:rgba(0, 0, 0, 0.4);}
+#Frame .Breadcrumbs a{color:#fff;}
+.Breadcrumbs,.Breadcrumbs .NoCrumb{color:#fff;}
