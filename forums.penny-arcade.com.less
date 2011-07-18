@@ -73,11 +73,13 @@ ul.DataList.Conversations, ul.DataList.SearchResults, ul.DataList.Discussions {
 	li.Item.New a.Title {
 		font-weight: 600;
 	}
-	// Background colors
+	// Thread list background colors //
 	li.Item, li.Item.New {
+		/* Even items */
 		background-color: @color-even;
 	}
 	li.Item:nth-of-type(odd), li.Item.New:nth-of-type(odd) {
+		/* Odd items */
 		background-color: @color-odd;
 	}
 }
