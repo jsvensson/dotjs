@@ -31,13 +31,13 @@
 
 .gradient () {
 	background: none; // Reset background image
-	background: #e0d8b8; // Old browsers
-	background: -moz-linear-gradient(top, #e0d8b8 0%, #e0d8b8 27%, #ad8e47 100%); // FF3.6+
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e0d8b8), color-stop(27%,#e0d8b8), color-stop(100%,#ad8e47)); // Chrome,Safari4+
-	background: -webkit-linear-gradient(top, #e0d8b8 0%,#e0d8b8 27%,#ad8e47 100%); // Chrome10+,Safari5.1+
-	background: -o-linear-gradient(top, #e0d8b8 0%,#e0d8b8 27%,#ad8e47 100%); // Opera11.10+
-	background: -ms-linear-gradient(top, #e0d8b8 0%,#e0d8b8 27%,#ad8e47 100%); // IE10+
-	background: linear-gradient(top, #e0d8b8 0%,#e0d8b8 27%,#ad8e47 100%); // W3C
+	background: @color-background; // Old browsers
+	background: -moz-linear-gradient(top, @color-background 0%, @color-background 27%, @color-background-gradient-bottom 100%); // FF3.6+
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,@color-background), color-stop(27%,@color-background), color-stop(100%,@color-background-gradient-bottom)); // Chrome,Safari4+
+	background: -webkit-linear-gradient(top, @color-background 0%,@color-background 27%,@color-background-gradient-bottom 100%); // Chrome10+,Safari5.1+
+	background: -o-linear-gradient(top, @color-background 0%,@color-background 27%,@color-background-gradient-bottom 100%); // Opera11.10+
+	background: -ms-linear-gradient(top, @color-background 0%,@color-background 27%,@color-background-gradient-bottom 100%); // IE10+
+	background: linear-gradient(top, @color-background 0%,@color-background 27%,@color-background-gradient-bottom 100%); // W3C
 }
 
 /* INDEX VIEW */
