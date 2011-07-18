@@ -41,15 +41,51 @@
 
 /* INDEX VIEW */
 
-/* Minipager colors */
+/* Alternating colors for forum list */
+ul.CategoryList {
+	li.Depth2 {
+		background-color: @color-even;
+	}
+	li.Depth2:nth-of-type(odd) {
+		background-color: @color-odd;
+	}
+}
 
+/* FORUM VIEW */
+
+/* Alternating colors for thread list
+   Unread threads in bold, read threads normal
+*/
+ul.DataList.Conversations, ul.DataList.SearchResults, ul.DataList.Discussions {
+	// Thread titles
+	a.Title {
+		font-family: @helvetica-neue;
+		font-weight: inherit;
+	}
+	li.Item a.Title {
+		font-weight: 300;
+	}
+	li.Item.New a.Title {
+		font-weight: 600;
+	}
+	// Background colors
+	li.Item, li.Item.New {
+		background-color: @color-even;
+	}
+	li.Item:nth-of-type(odd), li.Item.New:nth-of-type(odd) {
+		background-color: @color-odd;
+	}
+}
+
+/* Minipager colors */
 .MiniPager {
 	a, span {
 		background-color: @color-pager;
 		border-right: 1px solid darken(@color-pager, 20%);
-	}	
+	}
+	// Hide "go to page" dropdown
 	a.GoToPageLink {
-		display: none; /* So rarely used */
+		display: none;
 	}
 }
 
