@@ -5,7 +5,7 @@ link.attr({
         rel: 'stylesheet',
         href: 'http://dl.dropbox.com/u/569190/git/dotjs/forums.penny-arcade.com.css'
 });
-$("head").append(link);
+// $("head").append(link);
 
 // Bold thread title brackets
 $(".DiscussionName a.Title").html(function() {
