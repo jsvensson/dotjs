@@ -1,17 +1,4 @@
-// Bind Ctrl-S to submit post
-
-$.getScript('jquery.hotkeys.js', function() {
-  /*
-  $(document).ready(function(){
-    $('#Form_Body').bind('keyup', 'ctrl-s', function(){
-      $('#Form_Comment').submit();
-    });
-  });
-  */
-});
-
 // Stylesheet injection
-
 var link = $("<link>");
 link.attr({
         type: 'text/css',
