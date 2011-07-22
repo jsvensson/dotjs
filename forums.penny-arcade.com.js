@@ -23,7 +23,7 @@ $("head").append(link);
 // Bold thread title brackets
 $(".DiscussionName a.Title").html(function() {
 	var txt = $(this).html();
-	txt = txt.replace(/(\[.*\])/, "<b>$1</b>");
+	txt = txt.replace(/(\[.*?\])/g, "<b>$1</b>");
 	return(txt);
 });
 
