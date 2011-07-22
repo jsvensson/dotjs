@@ -14,7 +14,9 @@
 @color-even:	lighten(@color-odd, 5%);
 
 // Nested quotes
-@quote-odd:		#e0d8b8;
+//@quote-odd:		#e0d8b8;
+@quote-odd: rgba(224, 216, 184, 0.4);
+
 @quote-even: 	lighten(@quote-odd, 7%);
 
 // Mixins
@@ -165,13 +167,13 @@ blockquote.UserQuote {
 		.rounded-corners;
 		> blockquote.UserQuote {
 			div.QuoteText {
-				background-color: @quote-even;
+				//background-color: @quote-even;
 				> blockquote.UserQuote {
 					div.QuoteText {
-						background-color: @quote-odd;
+						//background-color: @quote-odd;
 						> blockquote.UserQuote {
 							div.QuoteText {
-								background-color: @quote-even;
+								//background-color: @quote-even;
 							}
 						}
 					}
