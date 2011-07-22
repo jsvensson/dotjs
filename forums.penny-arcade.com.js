@@ -21,7 +21,7 @@ link.attr({
 $("head").append(link);
 
 // Bold thread title brackets
-$(".DiscussionName a:first-child").html(function() {
+$(".DiscussionName a.Title").html(function() {
 	var txt = $(this).html();
 	txt = txt.replace(/(\[.*\])/, "<b>$1</b>");
 	return(txt);
