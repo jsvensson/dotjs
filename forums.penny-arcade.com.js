@@ -9,9 +9,9 @@ link.attr({
 
 // Bold thread title brackets
 $(".DiscussionName a.Title").html(function() {
-	var txt = $(this).html();
-	txt = txt.replace(/(\[.*?\])/g, "<b>$1</b>");
-	return(txt);
+	var $txt = $(this).html();
+	$txt = $txt.replace(/(\[.*?\])/g, "<b>$1</b>");
+	return($txt);
 });
 
 
