@@ -13,6 +13,6 @@ $(".DiscussionName a.Title").html(function() {
 	$txt = $txt.replace(/(\[.*?\])/g, "<b>$1</b>");
 	return($txt);
 });
-
-
+// Insert URL prompt button
+$(".ButtonBar").append('<div class="PromptUrl"><span>prompturl</span></div>');
 
