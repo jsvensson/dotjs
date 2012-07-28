@@ -1,268 +1,35 @@
 // Font families
 @helvetica-neue: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, 'Lucida Grande', Arial, sans-serif;
 
-// Color variables
-@color-infobox: #e5e4d7;
-@color-pager: #a7a69f;
-@color-background: #aa6935;
-@color-background-gradient-bottom: darken(@color-background, 20%);
-// Text colors
-@color-link: #0055A2;
 
-// Alternating list/post colors
-@color-odd:		#f4f4e8;
-@color-even:	lighten(@color-odd, 5%);
 
-// Nested quotes
-//@quote-odd:		#e0d8b8;
-@quote-odd:		rgba(224, 216, 184, 0.4);
-@quote-even:	lighten(@quote-odd, 7%);
 
-// Mixins
-.rounded-corners (@radius: 8px) {
-  border-radius: @radius;
-  -webkit-border-radius: @radius;
-  -moz-border-radius: @radius;
+
+
+// End of LESS setup
+
+/* Always-visible reactions */
+
+.ReactButtons,
+a.React.Infraction, a.React.ReportPost, a.React.Quote,
+div.Reactions .Bullet {
+	visibility: visible;
 }
 
-.quote-shadow (@color: #000) {
-	box-shadow: 6px 6px 3px @color;	
+/* Semi-transparent reaction bar */
+
+div.Reactions {
+	opacity: 0.3;
 }
 
-.gradient () {
-	background: none; // Reset background image
-	background: @color-background; // Old browsers
-	background: -moz-linear-gradient(top, @color-background 0%, @color-background 27%, @color-background-gradient-bottom 100%); // FF3.6+
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,@color-background), color-stop(27%,@color-background), color-stop(100%,@color-background-gradient-bottom)); // Chrome,Safari4+
-	background: -webkit-linear-gradient(top, @color-background 0%,@color-background 27%,@color-background-gradient-bottom 100%); // Chrome10+,Safari5.1+
-	background: -o-linear-gradient(top, @color-background 0%,@color-background 27%,@color-background-gradient-bottom 100%); // Opera11.10+
-	background: -ms-linear-gradient(top, @color-background 0%,@color-background 27%,@color-background-gradient-bottom 100%); // IE10+
-	background: linear-gradient(top, @color-background 0%,@color-background 27%,@color-background-gradient-bottom 100%); // W3C
+/* Hide who is online */
+
+div#WhosOnline {
+  visibility: hidden;
 }
 
-/* INDEX VIEW */
+/* Fonts for thread/post count columns */
 
-/* Alternating colors for forum list */
-ul.CategoryList {
-	li.Depth2 {
-		background-color: @color-even;
-	}
-	li.Depth2:nth-of-type(odd) {
-		background-color: @color-odd;
-	}
-}
-
-/* Remove user photo in most recent thread */
-div.Wrap a.PhotoLink {
-	display: none;
-}
-
-/* FORUM VIEW */
-
-/* Hide thread view column */
-// Table header
-table.DiscussionHeading td.CountViews {
-	display: none;
-}
-// Table column
-ul.DataList.CategoryList, ul.DataList.Discussions {
-	li.Item table td.CountViews {
-		display: none;
-	}
-}
-// Move the thread options menu to match
-ul.DataList.Discussions .ToggleFlyout {
-	right: 402px;
-}
-
-/* Tab row */
-div.Tabs {
-	li a, li a:link, li a:hover, li a:active, li a:visited {
-		// background-color: @color-background;
-	}
-	li.Active a {
-		// background-color: @color-background-gradient-bottom;
-	}
-}
-
-/* Alternating colors for thread list */
-ul.DataList.Conversations, ul.DataList.SearchResults, ul.DataList.Discussions {
-	// Thread titles
-	li.Item a.Title {
-		font-weight: 300;
-	}
-	li.Item.New a.Title {		
-		/* Set this to 600 to make unread threads bold. */ 
-		font-weight: inherit;
-	}
-	// Thread list background colors //
-	li.Item, li.Item.New {
-		/* Even items */
-		background-color: @color-even;
-	}
-	li.Item:nth-of-type(odd), li.Item.New:nth-of-type(odd) {
-		/* Odd items */
-		background-color: @color-odd;
-	}
-}
-
-// Hide entire minipager
-.PageControl {
-	// display: none;
-}
-
-/* Minipager colors */
-.MiniPager {
-	a, span {
-		background-color: @color-pager;
-		border-right: 1px solid darken(@color-pager, 20%);
-	}
-	// Hide "go to page" dropdown
-	a.GoToPageLink {
-		// display: none;
-	}
-}
-
-/* Different font for thread/post count */
-ul.DataList.Discussions, ul.DataList.CategoryList {
-	li.Item table td.Count {
-		text-transform: lowercase;
-		font-weight: 300;
-		font-family: @helvetica-neue;
-	}
-}
-
-/* Hide forum descriptions */
-div.CategoryDescription {
-	display: none;
-}
-
-/* Fix for jQuery modified bold brackets */
-.DiscussionName {
-	a.Title b {
-		font-weight: 600;
-	}
-}
-
-/* THREAD VIEW */
-
-/* Hide user level badge */
-/* .CommentTable td.Author div.Photo {
-	width: 80px;
-	span.Rank {
-		display: none;
-	}
-} */
-
-/* User info box */
-
-li.Comment {
-	table.CommentTable {
-		td.Author {
-			background-color: @color-infobox;
-			div.CommentInfo {
-				// display: none; // hide IP address for now when posting screens
-			}
-		}
-		td.Comment {
-			background-color: @color-odd;
-		}
-	}
-}
-
-li.Comment.Alt {
-	table.CommentTable {
-		td.Comment {
-			background-color: @color-even;
-		}
-	}
-}
-
-/* Post meta box */
-
-.CommentTable div.Meta span.DateCreated {
-	background-color: @quote-odd;
-	a {
-		color: @color-link;
-		}
-}
-
-/* Alternating colors for nested quotes */
-blockquote.UserQuote {
-	div.QuoteText {
-		background-color: @quote-odd;
-		.rounded-corners;
-		> blockquote.UserQuote {
-			div.QuoteText {
-				//background-color: @quote-even;
-				> blockquote.UserQuote {
-					div.QuoteText {
-						//background-color: @quote-odd;
-						> blockquote.UserQuote {
-							div.QuoteText {
-								//background-color: @quote-even;
-							}
-						}
-					}
-				}
-			}
-		}
-	}
-}
-
-/* Underlined links in posts and sigs for clarity */
-ul.MessageList div.Message a, ul.MessageList div.UserSignature a {
-	text-decoration: underline;
-}
-
-/* Move the smiley dropdown box out of the post textarea box */
-.EmotifyDropdown {
-	top: -20px;
-}
-
-/* GLOBAL TWEAKS */
-
-acronym {
-	text-decoration: underline;
-}
-
-/* New background image */
-#Frame {
-	background-repeat-x: no-repeat;
-	background-repeat-y: no-repeat;
-	background-attachment: fixed;
-	background-position-x: 50%;
-	background-position-y: 0px;
-	background-origin: initial;
-	background-clip: initial;
-	background-color: @color-background;
-	background-image: url(http://atomicplayboy.net/files/pa-restyle/wood.jpeg);
-}
-
-/* Table head */
-table.DiscussionHeading td, ul.CategoryList li.Depth1 {
-	background-image: url(http://atomicplayboy.net/files/pa-restyle/wood-dark.jpeg);
-}
-
-/* Form banner */
-div.CategoryHeadings, div.CategoryTabs, div.ActivityTabs, #MessageForm h2,
-div.ConversationTabs, div.ConversationsTabs, div.FormBanner, div.ProfileTabs,
-div.DiscussionTabs, div.DiscussionsTabs, div.SearchTabs {
-	.gradient;
-}
-
-/* Background for forum header */
-#Head, #Frame #Foot div {
-	color: #fff;
-	.rounded-corners(6px);
-	padding: 0.2em 0.8em;
-	background: rgba(0, 0, 0, 0.4);
-}
-
-#Frame .Breadcrumbs a,  {
-	color: #fff;
-}
-
-.Breadcrumbs, .Breadcrumbs .NoCrumb {
-	color: #fff;
+span.Number {
+	font: @helvetica-neue;
 }

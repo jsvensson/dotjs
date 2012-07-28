@@ -1,167 +1,20 @@
-/* INDEX VIEW */
-/* Alternating colors for forum list */
-ul.CategoryList li.Depth2 {
-  background-color: #fcfcf9;
+/* Always-visible reactions */
+.ReactButtons,
+a.React.Infraction,
+a.React.ReportPost,
+a.React.Quote,
+div.Reactions .Bullet {
+  visibility: visible;
 }
-ul.CategoryList li.Depth2:nth-of-type(odd) {
-  background-color: #f4f4e8;
+/* Semi-transparent reaction bar */
+div.Reactions {
+  opacity: 0.3;
 }
-/* Remove user photo in most recent thread */
-div.Wrap a.PhotoLink {
-  display: none;
+/* Hide who is online */
+div#WhosOnline {
+  visibility: hidden;
 }
-/* FORUM VIEW */
-/* Hide thread view column */
-table.DiscussionHeading td.CountViews {
-  display: none;
-}
-ul.DataList.CategoryList li.Item table td.CountViews, ul.DataList.Discussions li.Item table td.CountViews {
-  display: none;
-}
-ul.DataList.Discussions .ToggleFlyout {
-  right: 402px;
-}
-/* Tab row */
-/* Alternating colors for thread list */
-ul.DataList.Conversations li.Item a.Title, ul.DataList.SearchResults li.Item a.Title, ul.DataList.Discussions li.Item a.Title {
-  font-weight: 300;
-}
-ul.DataList.Conversations li.Item.New a.Title, ul.DataList.SearchResults li.Item.New a.Title, ul.DataList.Discussions li.Item.New a.Title {
-  /* Set this to 600 to make unread threads bold. */
-  font-weight: inherit;
-}
-ul.DataList.Conversations li.Item,
-ul.DataList.SearchResults li.Item,
-ul.DataList.Discussions li.Item,
-ul.DataList.Conversations li.Item.New,
-ul.DataList.SearchResults li.Item.New,
-ul.DataList.Discussions li.Item.New {
-  /* Even items */
-
-  background-color: #fcfcf9;
-}
-ul.DataList.Conversations li.Item:nth-of-type(odd),
-ul.DataList.SearchResults li.Item:nth-of-type(odd),
-ul.DataList.Discussions li.Item:nth-of-type(odd),
-ul.DataList.Conversations li.Item.New:nth-of-type(odd),
-ul.DataList.SearchResults li.Item.New:nth-of-type(odd),
-ul.DataList.Discussions li.Item.New:nth-of-type(odd) {
-  /* Odd items */
-
-  background-color: #f4f4e8;
-}
-/* Minipager colors */
-.MiniPager a, .MiniPager span {
-  background-color: #a7a69f;
-  border-right: 1px solid #75746b;
-}
-/* Different font for thread/post count */
-ul.DataList.Discussions li.Item table td.Count, ul.DataList.CategoryList li.Item table td.Count {
-  text-transform: lowercase;
-  font-weight: 300;
-  font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, 'Lucida Grande', Arial, sans-serif;
-}
-/* Hide forum descriptions */
-div.CategoryDescription {
-  display: none;
-}
-/* Fix for jQuery modified bold brackets */
-.DiscussionName a.Title b {
-  font-weight: 600;
-}
-/* THREAD VIEW */
-/* Hide user level badge */
-/* .CommentTable td.Author div.Photo {
-	width: 80px;
-	span.Rank {
-		display: none;
-	}
-} */
-/* User info box */
-li.Comment table.CommentTable td.Author {
-  background-color: #e5e4d7;
-}
-li.Comment table.CommentTable td.Comment {
-  background-color: #f4f4e8;
-}
-li.Comment.Alt table.CommentTable td.Comment {
-  background-color: #fcfcf9;
-}
-/* Post meta box */
-.CommentTable div.Meta span.DateCreated {
-  background-color: rgba(224, 216, 184, 0.4);
-}
-.CommentTable div.Meta span.DateCreated a {
-  color: #0055a2;
-}
-/* Alternating colors for nested quotes */
-blockquote.UserQuote div.QuoteText {
-  background-color: rgba(224, 216, 184, 0.4);
-  border-radius: 8px;
-  -webkit-border-radius: 8px;
-  -moz-border-radius: 8px;
-}
-/* Underlined links in posts and sigs for clarity */
-ul.MessageList div.Message a, ul.MessageList div.UserSignature a {
-  text-decoration: underline;
-}
-/* Move the smiley dropdown box out of the post textarea box */
-.EmotifyDropdown {
-  top: -20px;
-}
-/* GLOBAL TWEAKS */
-acronym {
-  text-decoration: underline;
-}
-/* New background image */
-#Frame {
-  background-repeat-x: no-repeat;
-  background-repeat-y: no-repeat;
-  background-attachment: fixed;
-  background-position-x: 50%;
-  background-position-y: 0px;
-  background-origin: initial;
-  background-clip: initial;
-  background-color: #aa6935;
-  background-image: url(http://atomicplayboy.net/files/pa-restyle/wood.jpeg);
-}
-/* Table head */
-table.DiscussionHeading td, ul.CategoryList li.Depth1 {
-  background-image: url(http://atomicplayboy.net/files/pa-restyle/wood-dark.jpeg);
-}
-/* Form banner */
-div.CategoryHeadings,
-div.CategoryTabs,
-div.ActivityTabs,
-#MessageForm h2,
-div.ConversationTabs,
-div.ConversationsTabs,
-div.FormBanner,
-div.ProfileTabs,
-div.DiscussionTabs,
-div.DiscussionsTabs,
-div.SearchTabs {
-  background: none;
-  background: #aa6935;
-  background: -moz-linear-gradient(top, #aa6935 0%, #aa6935 27%, #5c391d 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #aa6935), color-stop(27%, #aa6935), color-stop(100%, #5c391d));
-  background: -webkit-linear-gradient(top, #aa6935 0%, #aa6935 27%, #5c391d 100%);
-  background: -o-linear-gradient(top, #aa6935 0%, #aa6935 27%, #5c391d 100%);
-  background: -ms-linear-gradient(top, #aa6935 0%, #aa6935 27%, #5c391d 100%);
-  background: linear-gradient(top, #aa6935 0%, #aa6935 27%, #5c391d 100%);
-}
-/* Background for forum header */
-#Head, #Frame #Foot div {
-  color: #fff;
-  border-radius: 6px;
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  padding: 0.2em 0.8em;
-  background: rgba(0, 0, 0, 0.4);
-}
-#Frame .Breadcrumbs a {
-  color: #fff;
-}
-.Breadcrumbs, .Breadcrumbs .NoCrumb {
-  color: #fff;
+/* Fonts for thread/post count columns */
+span.Number {
+  font: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, 'Lucida Grande', Arial, sans-serif;
 }
