@@ -1,20 +1,21 @@
 /* Always-visible reactions */
 .ReactButtons,
-a.React.Infraction,
-a.React.ReportPost,
-a.React.Quote,
+a.React.Infraction, a.React.ReportPost, a.React.Quote,
 div.Reactions .Bullet {
-  visibility: visible;
-}
+  visibility: visible; }
+
 /* Semi-transparent reaction bar */
 div.Reactions {
-  opacity: 0.3;
-}
+  opacity: 0.3; }
+
 /* Hide who is online */
 div#WhosOnline {
-  visibility: hidden;
-}
+  visibility: hidden; }
+
 /* Fonts for thread/post count columns */
 span.Number {
-  font: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, 'Lucida Grande', Arial, sans-serif;
-}
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, "Lucida Grande", Arial, sans-serif; }
+
+/* Code block font */
+code, pre {
+  font-family: "Source Code Pro", "Menlo", "Courier New", "Courier", monospace; }
