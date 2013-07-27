@@ -7,6 +7,9 @@ link.attr({
 });
 $("head").append(link);
 
+// Thread title font
+$(".DiscussionName a.Title").css('font-family', 'helvetica, sans-serif');
+
 // Bold thread title brackets
 $(".DiscussionName a.Title").html(function() {
 	var $txt = $(this).html();
