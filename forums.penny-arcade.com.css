@@ -19,3 +19,7 @@ span.Number {
 /* Code block font */
 code, pre {
   font-family: "Source Code Pro", "Menlo", "Courier New", "Courier", monospace; }
+
+/* Code indentation */
+pre {
+  tab-size: 2; }
